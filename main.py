@@ -14,7 +14,7 @@ def regular_polygon(turtle, sides):
 #     sides = int(input("How many sides does your shape have?"))
 
 
-pen = Turtle
+pen = Turtle()
 pen.speed(0)
 pen.color("white")
 pen.hideturtle()
@@ -27,4 +27,6 @@ while True:
     if sides == 3:
         regular_polygon(pen, sides)
         name.write("TRIANGLE", font = ("Times New Roman", 20))
+
+
 screen.exitonclick()
