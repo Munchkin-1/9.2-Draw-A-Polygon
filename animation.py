@@ -7,6 +7,13 @@ import random
 def gen_color():
     return f"#{random.randint(0, 0xFFFFFF):06x}"
 
+def make_turtle():
+    yert = Turtle()
+    yert.shape("triangle")
+    yert.setheading(random.randint(0, 360))
+    yert.color(gen_color())
+
+
 def play_area():
         
     pen = Turtle()
@@ -56,7 +63,7 @@ def move_xy(turt, deltaX, deltaY):
 
 screen = Screen()
 screen.bgcolor("black")
-screen.setup(500, 500)
+screen.setup(2256, 1504)
 
 play_area()
 
@@ -69,7 +76,9 @@ deltaY = random.randint(-5,5)
 
 # while True:
 #     move_forward(yert)
-    
+
+print(f"DeltaX = {deltaX} \nDeltaY = {deltaY}")   
+
 while True:
     deltaX, deltaY = move_xy(yert, deltaX, deltaY)
 
